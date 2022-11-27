@@ -31,7 +31,12 @@ useEffect(() => {
 
   return (
     <div className="quote-box">
-      <p>{state.quote} <button onClick={getAllNotes}>Get Data</button>  {state.author}</p>
+      <p id="text">{state.quote}</p>
+      <p id="author">{state.author}</p>
+      <button id="new-quote" onClick={getAllNotes}>New Quote</button>
+      <a href={`https://www.twitter.com/intent/tweet?text=${state.quote}%0A&text=${state.author}`} target="_blank" 
+      id="tweet-quote" alt="share on twitter" className='twitter-share-button'
+      rel='noopener noreferrer'>Twitter</a>
     </div>
   );
 };
